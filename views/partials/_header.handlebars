@@ -1,0 +1,20 @@
+<nav>
+  <div class="row">
+  <div class="nav-wrapper white col m12">
+    <!-- to-do -->
+    <!-- write media query for small devices for the logo and the bars -->
+    <!-- write JS functions to handle actions on clicking the bars and create a sidebar -->
+    <a href="#" class="brand-logo center black-text">White Page</a>
+    <a href="#" class="button-collapse black-text show-on-large left"><i class="fa fa-bars"></i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/ideas?q=public" class="black-text">Public Ideas</a></li>
+      {{#if user}}
+        <li><a href="/ideas?q=personal" class="black-text">{{user.firstName}}</a></li>
+        <li><a href="/auth/logout" class="black-text">Logout</a></li>
+      {{else}}
+        <li><a href="/auth/oauth/google" class="btn white red-text">Login With Google</a></li>
+      {{/if}}
+    </ul>
+  </div>
+  </div>
+</nav>

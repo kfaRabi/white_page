@@ -10,8 +10,8 @@ passport.serializeUser( (user, done) => {
   done(null, user.id);
 });
 // get user from session
-passport.deserializeUser( async (googleID, done) => {
-  const user = await User.findOne({ googleID });
+passport.deserializeUser( async (_id, done) => {
+  const user = await User.findById({ _id });
   done(null, user);
 });
 
